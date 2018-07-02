@@ -23,7 +23,10 @@ app.use((req, res, next) => {
 
 // Maintenance Page
 // app.use((req, res, next) => {
-//     res.render('maintenance.hbs');
+//     res.render('maintenance.hbs', {
+//         message: "We'll Be Right Back!",
+//         subMessage: 'The site is currently being updated.'
+//     });
 // });
 
 
@@ -49,6 +52,13 @@ app.get('/about', (req, res) => {
         pageTitle: 'About',
         message: 'Learn about Node.js.'
     });
+});
+
+app.get('/projects', (req, res) => {
+   res.render('projects.hbs', {
+       pageTitle: 'Projects',
+       message: 'Coming soon!'
+   });
 });
 
 
